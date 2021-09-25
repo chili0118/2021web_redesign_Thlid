@@ -83,7 +83,7 @@ footer {
 .top-btn {
     fill: $colorgold;
     position: fixed;
-    right: 3rem;
+    right: 2rem;
     bottom: 2rem;
     border: none;
     background-color: transparent;
@@ -93,9 +93,11 @@ footer {
     z-index: 99;
 
     &:hover {
-        filter: contrast(1.5);
+        fill-opacity: 0.8;
     }
 }
+
+// indexArea
 
 // about {
 #about_content {
@@ -135,12 +137,21 @@ footer {
     letter-spacing: 1px;
     padding-left: 1px;
 
-    svg {
-        fill: #fff;
+    .f-icon {
+        text-decoration: none;
+        &:hover svg {
+            fill-opacity: 0.8;
+        }
+
+        svg {
+            fill: #fff;
+        }
     }
 }
 
 // 相同樣式
+
+// 首頁標題
 .h-title {
     font-size: 1.5rem;
     color: $colorgold;
@@ -149,6 +160,7 @@ footer {
     font-weight: 700;
 }
 
+// 按鈕
 .btn {
     border: 1px solid $colorgold;
     padding: 10px 30px;
@@ -174,5 +186,90 @@ footer {
     span {
         color: $colorgold;
         transition: 0.2s;
+    }
+}
+
+// servicePage
+
+.service-banner {
+    height: 300px;
+    background-image: url(/image/service-banner.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.page-title {
+    color: $colorgold;
+    font-size: 2rem;
+    letter-spacing: 3px;
+    padding-left: 3px;
+    font-weight: 700;
+    
+}
+
+.page-subtitle {
+    color: #333;
+    letter-spacing: 1.5px;
+    padding-left: 1.5px;
+}
+
+// 服務項目
+.s-i-card {
+    background-color: #e9e9e9;
+    color: #333;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: max-content;
+    box-sizing: border-box;
+
+    .s-i-text {
+        width: 50%;
+        padding: 10px 20px;
+        position: absolute;
+        left: 0;
+        box-sizing: border-box;
+
+        h2,
+        p {
+            width: 100%;
+            padding: 5px;
+            text-align-last: left;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #333;
+            letter-spacing: 2px;
+        }
+
+        p {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #555;
+        }
+    }
+
+    .s-i-img {
+        width: 50%;
+        transition: all 0.35s ease-in-out;
+        transform: scale(1.5);
+        position: relative;
+        float: right;
+        right: -15%;
+        z-index: 1;
+
+        &:hover {
+            right: -10%;
+        }
+
+        img {
+            border-radius: 50%;
+            border: 4px solid #fff;
+            width: 380px;
+            height: 380px;
+            object-fit: cover;
+        }
     }
 }
