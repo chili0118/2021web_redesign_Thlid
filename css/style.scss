@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;500;700&display=swap");
+$colorgold: #c9aa82;
+$tablet: 1024px;
+$mobile: 767px;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Noto Sans TC", sans-serif;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+}
+
+header,
+section,
+footer {
+    display: block;
+    width: 100%;
+}
+
+// banner
+
+#banner_bg {
+    background-image: url(/image/h-banner.JPG);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    #banner_text {
+        width: 100%;
+        text-align: center;
+
+        #banner_title {
+            font-size: 2.5rem;
+            letter-spacing: 5px;
+            padding-left: 5px;
+            margin-bottom: 15px;
+        }
+
+        #banner_content {
+            font-size: 1.2rem;
+            letter-spacing: 3px;
+            padding-left: 3px;
+        }
+    }
+}
+
+// nav
+.bg-light {
+    background-color: $colorgold !important;
+}
+
+.logo {
+    height: 60px;
+    padding: 10px;
+}
+
+.navbar-brand {
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    color: #fff !important;
+    letter-spacing: 1px;
+    margin-left: 15px;
+    transition: 0.3s;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+// about {
+#about_content {
+    letter-spacing: 1px;
+    padding-left: 1px;
+}
+
+// case
+
+#case_content {
+    a {
+        text-decoration: none;
+    }
+
+    .case-subtitle {
+        letter-spacing: 2px;
+        padding-left: 2px;
+        font-size: 1rem;
+        color: #333;
+    }
+}
+
+// service
+
+#service_content {
+    ul {
+        @media screen and (max-width: $mobile) {
+            list-style: none;
+        }
+    }
+}
+
+#footer {
+
+    background-color: $colorgold;
+    padding: 20px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding-left: 1px;
+    
+
+    svg {
+        fill: #fff;
+    }
+}
+
+// 相同樣式
+.h-title {
+    font-size: 1.5rem;
+    color: $colorgold;
+    letter-spacing: 2px;
+    padding-left: 2px;
+    font-weight: 700;
+}
+
+.btn {
+    border: 1px solid $colorgold;
+    padding: 10px 30px;
+    border-radius: 0;
+    color: $colorgold;
+    transition: 0.2s 0.1s;
+    background-color: transparent;
+
+    span {
+        letter-spacing: 2px;
+        padding-left: 2px;
+    }
+
+    &:hover {
+        background-color: $colorgold;
+    }
+
+    &:hover span {
+        color: #fff;
+        transition: 0.2s 0.1s;
+    }
+
+    span {
+        color: $colorgold;
+        transition: 0.2s;
+    }
+}
