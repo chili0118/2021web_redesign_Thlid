@@ -79,6 +79,24 @@ footer {
     }
 }
 
+// scrollTop
+.top-btn {
+    fill: $colorgold;
+    position: fixed;
+    right: 3rem;
+    bottom: 2rem;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    display: none;
+    transition: 0.5s;
+    z-index: 99;
+
+    &:hover {
+        filter: contrast(1.5);
+    }
+}
+
 // about {
 #about_content {
     letter-spacing: 1px;
@@ -111,13 +129,11 @@ footer {
 }
 
 #footer {
-
     background-color: $colorgold;
     padding: 20px;
     font-size: 14px;
     letter-spacing: 1px;
     padding-left: 1px;
-    
 
     svg {
         fill: #fff;

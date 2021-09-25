@@ -75,6 +75,25 @@ footer {
           transform: scale(1.1);
 }
 
+.top-btn {
+  fill: #c9aa82;
+  position: fixed;
+  right: 3rem;
+  bottom: 2rem;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  display: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  z-index: 99;
+}
+
+.top-btn:hover {
+  -webkit-filter: contrast(1.5);
+          filter: contrast(1.5);
+}
+
 #about_content {
   letter-spacing: 1px;
   padding-left: 1px;
