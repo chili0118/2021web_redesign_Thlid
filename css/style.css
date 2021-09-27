@@ -79,7 +79,7 @@ footer {
   fill: #c9aa82;
   position: fixed;
   right: 2rem;
-  bottom: 2rem;
+  bottom: 3.5rem;
   border: none;
   background-color: transparent;
   outline: none;
@@ -260,5 +260,131 @@ footer {
   height: 380px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+#service_process ul {
+  list-style-type: decimal-leading-zero;
+}
+
+#service_process ul :nth-last-child(1) {
+  list-style: none;
+}
+
+#service_process li {
+  position: relative;
+  width: 5px;
+  background-color: #b9b9b9;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+#service_process li::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: #c9aa82;
+  z-index: 1;
+}
+
+#service_process li .s-p-icon {
+  position: relative;
+}
+
+#service_process li .s-p-icon svg {
+  fill: #fff;
+}
+
+#service_process li .s-p-text {
+  position: relative;
+  bottom: 0;
+  width: 300px;
+  padding: 15px;
+}
+
+#service_process li .s-p-text::before {
+  content: "";
+  position: absolute;
+  bottom: 7px;
+  width: 0;
+  height: 0;
+}
+
+#service_process li :nth-child(odd) .s-p-text {
+  left: 45px;
+}
+
+.portfolio-banner {
+  height: 300px;
+  background-image: url(/image/portfolio-banner.jpg);
+  background-position: center;
+  background-size: center;
+}
+
+.qa-banner {
+  height: 300px;
+  background-image: url(/image/qa-banner.jpg);
+  background-position: center;
+  background-size: center;
+}
+
+#qa_area .panel {
+  margin: 10px auto;
+}
+
+#qa_area .panel .panel-heading {
+  border: 1px solid #c9aa82;
+  padding: 15px 20px;
+}
+
+#qa_area .panel .panel-heading .panel-title {
+  letter-spacing: 2.5px;
+}
+
+#qa_area .panel .panel-heading .panel-title a {
+  text-decoration: none;
+  color: #333;
+}
+
+#qa_area .panel .panel-body {
+  border: 1px solid #c9aa82;
+  background-color: #c9aa82;
+  color: #fff;
+  padding: 15px 20px;
+  letter-spacing: 1.5px;
+  font-weight: 500;
+}
+
+#qa_area .panel .panel-body p {
+  margin-bottom: 0;
+}
+
+#qa_area .panel .panel-body .nub-style {
+  list-style-type: decimal;
+  padding-left: 25px;
+}
+
+#qa_area .panel .panel-body .nub-style li {
+  margin: 5px 0;
+}
+
+#qa_area .panel .panel-body .dot-style {
+  padding-left: 25px;
+}
+
+#qa_area .panel .panel-body .dot-style li {
+  margin: 5px 0;
+}
+
+.contact-banner {
+  height: 300px;
+  background-image: url(/image/contact-banner.jpg);
+  background-position: center;
+  background-size: center;
 }
 /*# sourceMappingURL=style.css.map */

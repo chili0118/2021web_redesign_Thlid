@@ -84,7 +84,7 @@ footer {
     fill: $colorgold;
     position: fixed;
     right: 2rem;
-    bottom: 2rem;
+    bottom: 3.5rem;
     border: none;
     background-color: transparent;
     outline: none;
@@ -189,7 +189,7 @@ footer {
     }
 }
 
-// servicePage
+// service_page
 
 .service-banner {
     height: 300px;
@@ -204,7 +204,6 @@ footer {
     letter-spacing: 3px;
     padding-left: 3px;
     font-weight: 700;
-    
 }
 
 .page-subtitle {
@@ -272,4 +271,144 @@ footer {
             object-fit: cover;
         }
     }
+}
+
+// 服務流程
+
+#service_process {
+    ul {
+        list-style-type: decimal-leading-zero;
+    }
+
+    ul :nth-last-child(1) {
+        list-style: none;
+    }
+
+    li {
+        position: relative;
+        width: 5px;
+        background-color: rgb(185, 185, 185);
+        margin: 0 auto;
+        padding-top: 50px;
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: $colorgold;
+            z-index: 1;
+        }
+
+        .s-p-icon {
+            position: relative;
+            svg {
+                fill: #fff;
+            }
+        }
+
+        .s-p-text {
+            position: relative;
+            bottom: 0;
+            width: 300px;
+            padding: 15px;
+
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: 7px;
+                width: 0;
+                height: 0;
+            }
+        }
+    }
+
+    li :nth-child(odd) .s-p-text {
+        left: 45px;
+    }
+}
+
+// portfolio_page
+
+.portfolio-banner {
+    height: 300px;
+    background-image: url(/image/portfolio-banner.jpg);
+    background-position: center;
+    background-size: center;
+}
+
+// Q&A_page
+
+.qa-banner {
+    height: 300px;
+    background-image: url(/image/qa-banner.jpg);
+    background-position: center;
+    background-size: center;
+}
+
+#qa_area {
+    
+
+    .panel {
+        margin: 10px auto;
+
+        .panel-heading {
+            border: 1px solid $colorgold;
+            padding: 15px 20px;
+    
+            .panel-title {
+                letter-spacing: 2.5px;
+        
+                a {
+                    text-decoration: none;
+                    color: #333;
+                }
+            }
+        }
+
+        .panel-body {
+            border: 1px solid $colorgold;
+            background-color: $colorgold;
+            color: #fff;
+            padding: 15px 20px;
+            letter-spacing: 1.5px;
+            font-weight: 500;
+
+            p {
+                margin-bottom: 0;
+            }
+
+            .nub-style {
+                list-style-type: decimal;
+                padding-left: 25px;
+
+                li {
+                    margin: 5px 0;
+                }
+            }
+
+            .dot-style {
+                padding-left: 25px;
+                
+                li {
+                    margin: 5px 0;
+                }
+            }
+        }
+    }
+    
+    
+}
+
+// contact_page
+
+.contact-banner {
+    height: 300px;
+    background-image: url(/image/contact-banner.jpg);
+    background-position: center;
+    background-size: center;
 }
