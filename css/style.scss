@@ -456,3 +456,40 @@ footer {
         }
     }
 }
+
+// 表單
+form {
+
+    label {
+        letter-spacing: 2px;
+        color: #333;
+    }
+
+    .form-radio-legend {
+        color: #333;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+    }
+
+    .form-checkbox-legend {
+        color: #333;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+    }
+
+    .form-control {
+        border-radius: 0;
+        border: 1.5px solid $colorgold;
+    }
+
+    .form-control::placeholder {
+        color: #555;
+        font-weight: 300;
+        letter-spacing: 1.5px;
+        font-size: 14px;
+    }
+
+    .form-info-house, .form-info-ping, .form-info-item {
+        margin: 15px 0;
+    }
+}

@@ -425,4 +425,58 @@ footer {
   text-decoration: none;
   color: #555;
 }
+
+form label {
+  letter-spacing: 2px;
+  color: #333;
+}
+
+form .form-radio-legend {
+  color: #333;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+form .form-checkbox-legend {
+  color: #333;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+form .form-control {
+  border-radius: 0;
+  border: 1.5px solid #c9aa82;
+}
+
+form .form-control::-webkit-input-placeholder {
+  color: #555;
+  font-weight: 300;
+  letter-spacing: 1.5px;
+  font-size: 14px;
+}
+
+form .form-control:-ms-input-placeholder {
+  color: #555;
+  font-weight: 300;
+  letter-spacing: 1.5px;
+  font-size: 14px;
+}
+
+form .form-control::-ms-input-placeholder {
+  color: #555;
+  font-weight: 300;
+  letter-spacing: 1.5px;
+  font-size: 14px;
+}
+
+form .form-control::placeholder {
+  color: #555;
+  font-weight: 300;
+  letter-spacing: 1.5px;
+  font-size: 14px;
+}
+
+form .form-info-house, form .form-info-ping, form .form-info-item {
+  margin: 15px 0;
+}
 /*# sourceMappingURL=style.css.map */
