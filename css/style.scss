@@ -341,6 +341,24 @@ footer {
     background-size: center;
 }
 
+.filters {
+    padding: 10px;
+    
+    .pf-item {
+        cursor: pointer;
+        color: #333;
+
+        &:hover {
+            color: #555;
+        }
+    }
+
+    .pf-active {
+        color: $colorgold;
+        cursor: pointer;
+    }
+}
+
 // Q&A_page
 
 .qa-banner {
@@ -375,7 +393,6 @@ footer {
                     content: url(/image/arrow_top.png);
                     float: right;
                     transition: all 0.5s;
-                    
                 }
                 
             }

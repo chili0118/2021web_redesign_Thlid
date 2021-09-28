@@ -326,6 +326,24 @@ footer {
   background-size: center;
 }
 
+.filters {
+  padding: 10px;
+}
+
+.filters .pf-item {
+  cursor: pointer;
+  color: #333;
+}
+
+.filters .pf-item:hover {
+  color: #555;
+}
+
+.filters .pf-active {
+  color: #c9aa82;
+  cursor: pointer;
+}
+
 .qa-banner {
   height: 300px;
   background-image: url(/image/qa-banner.jpg);
