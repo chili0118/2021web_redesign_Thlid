@@ -330,7 +330,6 @@ footer {
                     left: 20%;
                     margin-left: -50px;
                 }
-                
 
                 svg {
                     fill: #fff;
@@ -389,7 +388,6 @@ footer {
                 @media screen and (max-width: $mobile) {
                     padding: 30px 25px;
                     width: 60%;
-                    
                 }
             }
         }
@@ -408,9 +406,10 @@ footer {
 .filters {
     padding: 10px;
 
-    .pf-item {
+    .pf-btn {
         cursor: pointer;
         color: #333;
+        padding: 5px;
 
         &:hover {
             color: #555;
@@ -420,8 +419,137 @@ footer {
     .pf-active {
         color: $colorgold;
         cursor: pointer;
+        padding: 5px;
     }
 }
+
+.p-f-item {
+    padding: 20px 10px;
+    a {
+        text-decoration: none;
+        color: #333;
+
+        &:hover img {
+            transform: scale(1.5);
+        }
+
+        .pf-img {
+            position: relative;
+            transform: scale(1);
+            transition: all 2.2s ease-in-out;
+            overflow: hidden;
+
+            &:hover .pf-hover {
+                background: rgba(0, 0, 0, 0.45);
+            }
+
+            img {
+                transition: all 2.4s ease-in-out;
+            }
+        }
+
+        .pf-hover {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.25);
+            width: 100%;
+            height: 100%;
+        }
+
+        .pf-text {
+            color: #333;
+            letter-spacing: 2.5px;
+
+            h3 {
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+#pf_page {
+    .page-link {
+        border: none;
+        transition: 0.5s;
+
+        &:focus {
+            box-shadow: none;
+        }
+
+        &:hover {
+            background-color: transparent;
+        }
+
+        &:hover svg {
+            fill: #555;
+        }
+
+        svg {
+            fill: $colorgold;
+            transition: 0.3s;
+        }
+    }
+}
+
+// 個別作品
+
+.breadcrumb {
+    margin-top: 100px;
+    background-color: transparent;
+    font-weight: 300;
+    letter-spacing: 1px;
+
+    a {
+        color: $colorgold;
+        text-decoration: none;
+        transition: .3s;
+
+        &:hover {
+            font-weight: 500;
+        }
+    }
+}
+
+.project-title {
+    margin: 20px auto;
+
+    .pj-title {
+        font-size: 2rem;
+        font-weight: 700;
+        color: $colorgold;
+        letter-spacing: 3px;
+    }
+}
+
+.pj-vr {
+    .pj-vr-img {
+        img {
+            height: 450px;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.pj-subtitle {
+
+    hr {
+        border-top: 2.5px solid $colorgold;
+    }
+
+    .pj-hr {
+        margin: 30px 0;
+    }
+}
+
+// 瀏覽更多照片
+.pj-more-pic {
+    
+}
+
 
 // Q&A_page
 
