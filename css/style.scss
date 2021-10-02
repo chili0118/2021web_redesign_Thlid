@@ -83,14 +83,20 @@ footer {
 .top-btn {
     fill: $colorgold;
     position: fixed;
-    right: 2rem;
-    bottom: 3.5rem;
+    right: 3rem;
+    bottom: 6rem;
     border: none;
     background-color: transparent;
     outline: none;
     display: none;
     transition: 0.5s;
     z-index: 99;
+
+    @media screen and (max-width: $mobile) {
+        right: 1rem;
+        width: 40px !important;
+        height: 40px !important;
+    }
 
     &:hover {
         fill-opacity: 0.8;
@@ -408,18 +414,28 @@ footer {
 
     .pf-btn {
         cursor: pointer;
-        color: #333;
-        padding: 5px;
+        color: rgb(150, 150, 150);
+        padding: 15px;
+        transition: .5s;
+        
+        letter-spacing: 2px;
 
         &:hover {
-            color: #555;
+            color: #333;
+            
         }
     }
 
     .pf-active {
         color: $colorgold;
+        font-weight: 700;
         cursor: pointer;
-        padding: 5px;
+        padding: 15px 2px;
+        letter-spacing: 2px;
+        border-bottom: 5px solid $colorgold;
+        color: #333;
+        box-sizing: border-box;
+       
     }
 }
 
@@ -436,7 +452,7 @@ footer {
         .pf-img {
             position: relative;
             transform: scale(1);
-            transition: all 2.2s ease-in-out;
+            transition: all 0.5s ease-in-out;
             overflow: hidden;
 
             &:hover .pf-hover {
@@ -444,7 +460,7 @@ footer {
             }
 
             img {
-                transition: all 2.4s ease-in-out;
+                transition: all 0.5s ease-in-out;
             }
         }
 
@@ -505,7 +521,7 @@ footer {
     a {
         color: $colorgold;
         text-decoration: none;
-        transition: .3s;
+        transition: 0.3s;
 
         &:hover {
             font-weight: 500;
@@ -526,16 +542,48 @@ footer {
 
 .pj-vr {
     .pj-vr-img {
+        position: relative;
+        height: 450px;
+        width: 100%;
+
         img {
             height: 450px;
             width: 100%;
             object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        a {
+            position: absolute;
+            z-index: 2;
+            right: 2rem;
+            bottom: 1.5rem;
+            width: 32px;
+            height: 32px;
+            display: block;
+            transform: translate(-50%, -50%);
+
+            svg {
+                filter: drop-shadow(0px 0px 5px rgb(201, 171, 130));
+            }
+
+            .fa-vr-cardboard {
+                width: 50px;
+                height: 50px;
+                color: #fff;
+                transition: 0.5s;
+
+                &:hover {
+                    color: rgba(255, 255, 255, 0.8);
+                }
+            }
         }
     }
 }
 
 .pj-subtitle {
-
     hr {
         border-top: 2.5px solid $colorgold;
     }
@@ -546,10 +594,74 @@ footer {
 }
 
 // 瀏覽更多照片
-.pj-more-pic {
-    
-}
+.card-columns {
 
+    @media screen and (max-width: $mobile) {
+        column-count: 2;
+    }
+    
+    .card {
+        border: none;
+        border-radius: 0;
+
+        .card-info {
+            width: 100%;
+            height: 100%;
+            position: relative;
+
+
+            .card-img {
+                border-bottom-right-radius: 0;
+                border-bottom-left-radius: 0;
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
+            }
+    
+            .card-img-top {
+                border-bottom-right-radius: 0;
+                border-bottom-left-radius: 0;
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
+            }
+
+            .pj-shareBtn {
+                position: absolute;
+                z-index: 2;
+                right: 1rem;
+                bottom: 1rem;
+
+                svg {
+                    fill: #fff;
+                    transition: .5s;
+
+                    &:hover {
+                        fill: rgba(255, 255, 255, 0.8);
+                    }
+                }
+
+            }
+
+            .pj-s-btn {
+                position: absolute;
+                bottom: 2rem;
+                display: none;
+                
+
+                svg {
+                    fill: #fff;
+                    margin: 5px 0;
+                    transition: .5s;
+
+                    &:hover {
+                        fill: rgba(255, 255, 255, 0.8);
+                    }
+                }
+            }
+        }
+
+        
+    }
+}
 
 // Q&A_page
 
@@ -568,8 +680,15 @@ footer {
             border: 1px solid $colorgold;
             padding: 15px 20px;
 
+            @media screen and (max-width: $mobile) {
+                width: 90%;
+            }
+
             .panel-title {
                 letter-spacing: 2.5px;
+                @media screen and (max-width: $mobile) {
+                    font-size: 1.2rem;
+                }
 
                 a {
                     text-decoration: none;

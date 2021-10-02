@@ -78,8 +78,8 @@ footer {
 .top-btn {
   fill: #c9aa82;
   position: fixed;
-  right: 2rem;
-  bottom: 3.5rem;
+  right: 3rem;
+  bottom: 6rem;
   border: none;
   background-color: transparent;
   outline: none;
@@ -87,6 +87,14 @@ footer {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   z-index: 99;
+}
+
+@media screen and (max-width: 767px) {
+  .top-btn {
+    right: 1rem;
+    width: 40px !important;
+    height: 40px !important;
+  }
 }
 
 .top-btn:hover {
@@ -403,18 +411,31 @@ footer {
 
 .filters .pf-btn {
   cursor: pointer;
-  color: #333;
-  padding: 5px;
+  color: #969696;
+  padding: 15px;
+  -webkit-transition: .5s;
+  transition: .5s;
+  letter-spacing: 2px;
 }
 
 .filters .pf-btn:hover {
-  color: #555;
+  color: #333;
 }
 
 .filters .pf-active {
   color: #c9aa82;
+  font-weight: 700;
   cursor: pointer;
-  padding: 5px;
+  padding: 15px 2px;
+  letter-spacing: 2px;
+  border-bottom: 5px solid #c9aa82;
+  color: #333;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.filters .pf-active span {
+  width: 20%;
 }
 
 .p-f-item {
@@ -435,8 +456,8 @@ footer {
   position: relative;
   -webkit-transform: scale(1);
           transform: scale(1);
-  -webkit-transition: all 2.2s ease-in-out;
-  transition: all 2.2s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   overflow: hidden;
 }
 
@@ -445,8 +466,8 @@ footer {
 }
 
 .p-f-item a .pf-img img {
-  -webkit-transition: all 2.4s ease-in-out;
-  transition: all 2.4s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .p-f-item a .pf-hover {
@@ -504,8 +525,8 @@ footer {
 .breadcrumb a {
   color: #c9aa82;
   text-decoration: none;
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .breadcrumb a:hover {
@@ -523,11 +544,49 @@ footer {
   letter-spacing: 3px;
 }
 
+.pj-vr .pj-vr-img {
+  position: relative;
+  height: 450px;
+  width: 100%;
+}
+
 .pj-vr .pj-vr-img img {
   height: 450px;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.pj-vr .pj-vr-img a {
+  position: absolute;
+  z-index: 2;
+  right: 2rem;
+  bottom: 1.5rem;
+  width: 32px;
+  height: 32px;
+  display: block;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.pj-vr .pj-vr-img a svg {
+  -webkit-filter: drop-shadow(0px 0px 5px #c9ab82);
+          filter: drop-shadow(0px 0px 5px #c9ab82);
+}
+
+.pj-vr .pj-vr-img a .fa-vr-cardboard {
+  width: 50px;
+  height: 50px;
+  color: #fff;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.pj-vr .pj-vr-img a .fa-vr-cardboard:hover {
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .pj-subtitle hr {
@@ -536,6 +595,72 @@ footer {
 
 .pj-subtitle .pj-hr {
   margin: 30px 0;
+}
+
+@media screen and (max-width: 767px) {
+  .card-columns {
+    -webkit-column-count: 2;
+            column-count: 2;
+  }
+}
+
+.card-columns .card {
+  border: none;
+  border-radius: 0;
+}
+
+.card-columns .card .card-info {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.card-columns .card .card-info .card-img {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.card-columns .card .card-info .card-img-top {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.card-columns .card .card-info .pj-shareBtn {
+  position: absolute;
+  z-index: 2;
+  right: 1rem;
+  bottom: 1rem;
+}
+
+.card-columns .card .card-info .pj-shareBtn svg {
+  fill: #fff;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.card-columns .card .card-info .pj-shareBtn svg:hover {
+  fill: rgba(255, 255, 255, 0.8);
+}
+
+.card-columns .card .card-info .pj-s-btn {
+  position: absolute;
+  bottom: 2rem;
+  display: none;
+}
+
+.card-columns .card .card-info .pj-s-btn svg {
+  fill: #fff;
+  margin: 5px 0;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.card-columns .card .card-info .pj-s-btn svg:hover {
+  fill: rgba(255, 255, 255, 0.8);
 }
 
 .qa-banner {
@@ -554,8 +679,20 @@ footer {
   padding: 15px 20px;
 }
 
+@media screen and (max-width: 767px) {
+  #qa_area .panel .panel-heading {
+    width: 90%;
+  }
+}
+
 #qa_area .panel .panel-heading .panel-title {
   letter-spacing: 2.5px;
+}
+
+@media screen and (max-width: 767px) {
+  #qa_area .panel .panel-heading .panel-title {
+    font-size: 1.2rem;
+  }
 }
 
 #qa_area .panel .panel-heading .panel-title a {
