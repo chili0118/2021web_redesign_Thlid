@@ -453,11 +453,14 @@ footer {
         color: rgb(150, 150, 150);
         padding: 15px;
         transition: 0.5s;
-        flex-basis: 20%;
         letter-spacing: 2px;
 
         &:hover {
             color: #333;
+        }
+
+        @media screen and (max-width: $mobile) {
+            flex-basis: 20%;
         }
     }
 
@@ -470,7 +473,10 @@ footer {
         border-bottom: 5px solid $colorgold;
         color: #333;
         box-sizing: border-box;
-        flex-basis: 20%;
+
+        @media screen and (max-width: $mobile) {
+            flex-basis: 20%;
+        }
     }
 }
 

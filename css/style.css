@@ -457,13 +457,18 @@ footer {
   padding: 15px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  -ms-flex-preferred-size: 20%;
-      flex-basis: 20%;
   letter-spacing: 2px;
 }
 
 .filters .pf-btn:hover {
   color: #333;
+}
+
+@media screen and (max-width: 767px) {
+  .filters .pf-btn {
+    -ms-flex-preferred-size: 20%;
+        flex-basis: 20%;
+  }
 }
 
 .filters .pf-active {
@@ -476,8 +481,13 @@ footer {
   color: #333;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  -ms-flex-preferred-size: 20%;
-      flex-basis: 20%;
+}
+
+@media screen and (max-width: 767px) {
+  .filters .pf-active {
+    -ms-flex-preferred-size: 20%;
+        flex-basis: 20%;
+  }
 }
 
 .p-f-item {
