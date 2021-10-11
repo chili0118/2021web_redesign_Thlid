@@ -62,6 +62,22 @@ footer {
   letter-spacing: 1px;
 }
 
+.navbar-toggler {
+  border: none;
+}
+
+@media screen and (max-width: 767px) {
+  .navbar-collapse {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .navbar-collapse .navbar-nav {
+    height: 100vh;
+  }
+}
+
 .nav-link {
   color: #fff !important;
   letter-spacing: 1px;
@@ -73,6 +89,13 @@ footer {
 .nav-link:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+}
+
+@media screen and (max-width: 767px) {
+  .nav-link {
+    padding: 30px 0;
+    font-size: 1.2rem;
+  }
 }
 
 .top-btn {
@@ -115,6 +138,25 @@ footer {
   padding-left: 2px;
   font-size: 1rem;
   color: #333;
+}
+
+#case_content .case:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+#case_content .case-card {
+  -webkit-filter: brightness(1.2) saturate(1.2) contrast(0.85);
+          filter: brightness(1.2) saturate(1.2) contrast(0.85);
+  -webkit-transition: -webkit-filter 200ms linear, -webkit-transform 200ms linear;
+  transition: -webkit-filter 200ms linear, -webkit-transform 200ms linear;
+  transition: filter 200ms linear, transform 200ms linear;
+  transition: filter 200ms linear, transform 200ms linear, -webkit-filter 200ms linear, -webkit-transform 200ms linear;
+}
+
+#case_content .card-grid:hover > .case:not(:hover) .case-card {
+  -webkit-filter: brightness(1) saturate(0.8) contrast(1) blur(20px);
+          filter: brightness(1) saturate(0.8) contrast(1) blur(20px);
 }
 
 @media screen and (max-width: 767px) {
@@ -413,8 +455,10 @@ footer {
   cursor: pointer;
   color: #969696;
   padding: 15px;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
   letter-spacing: 2px;
 }
 
@@ -432,10 +476,8 @@ footer {
   color: #333;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-}
-
-.filters .pf-active span {
-  width: 20%;
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
 }
 
 .p-f-item {
@@ -638,8 +680,8 @@ footer {
 
 .card-columns .card .card-info .pj-shareBtn svg {
   fill: #fff;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .card-columns .card .card-info .pj-shareBtn svg:hover {
@@ -655,8 +697,8 @@ footer {
 .card-columns .card .card-info .pj-s-btn svg {
   fill: #fff;
   margin: 5px 0;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .card-columns .card .card-info .pj-s-btn svg:hover {

@@ -68,6 +68,22 @@ footer {
     letter-spacing: 1px;
 }
 
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-collapse {
+    @media screen and (max-width: $mobile) {
+        text-align: center;
+    }
+
+    .navbar-nav {
+        @media screen and (max-width: $mobile) {
+            height: 100vh;
+        }
+    }
+}
+
 .nav-link {
     color: #fff !important;
     letter-spacing: 1px;
@@ -76,6 +92,11 @@ footer {
 
     &:hover {
         transform: scale(1.1);
+    }
+
+    @media screen and (max-width: $mobile) {
+        padding: 30px 0;
+        font-size: 1.2rem;
     }
 }
 
@@ -123,6 +144,19 @@ footer {
         padding-left: 2px;
         font-size: 1rem;
         color: #333;
+    }
+
+    .case:hover {
+        transform: scale(1.05);
+    }
+
+    .case-card {
+        filter: brightness(1.2) saturate(1.2) contrast(0.85);
+        transition: filter 200ms linear, transform 200ms linear;
+    }
+
+    .card-grid:hover > .case:not(:hover) .case-card {
+        filter: brightness(1) saturate(0.8) contrast(1) blur(20px);
     }
 }
 
@@ -354,6 +388,8 @@ footer {
                         height: 40px;
                     }
                 }
+
+                
             }
 
             .s-p-text {
@@ -416,13 +452,12 @@ footer {
         cursor: pointer;
         color: rgb(150, 150, 150);
         padding: 15px;
-        transition: .5s;
-        
+        transition: 0.5s;
+        flex-basis: 20%;
         letter-spacing: 2px;
 
         &:hover {
             color: #333;
-            
         }
     }
 
@@ -435,7 +470,7 @@ footer {
         border-bottom: 5px solid $colorgold;
         color: #333;
         box-sizing: border-box;
-       
+        flex-basis: 20%;
     }
 }
 
@@ -595,11 +630,10 @@ footer {
 
 // 瀏覽更多照片
 .card-columns {
-
     @media screen and (max-width: $mobile) {
         column-count: 2;
     }
-    
+
     .card {
         border: none;
         border-radius: 0;
@@ -609,14 +643,13 @@ footer {
             height: 100%;
             position: relative;
 
-
             .card-img {
                 border-bottom-right-radius: 0;
                 border-bottom-left-radius: 0;
                 border-top-left-radius: 0;
                 border-top-right-radius: 0;
             }
-    
+
             .card-img-top {
                 border-bottom-right-radius: 0;
                 border-bottom-left-radius: 0;
@@ -632,25 +665,23 @@ footer {
 
                 svg {
                     fill: #fff;
-                    transition: .5s;
+                    transition: 0.5s;
 
                     &:hover {
                         fill: rgba(255, 255, 255, 0.8);
                     }
                 }
-
             }
 
             .pj-s-btn {
                 position: absolute;
                 bottom: 2rem;
                 display: none;
-                
 
                 svg {
                     fill: #fff;
                     margin: 5px 0;
-                    transition: .5s;
+                    transition: 0.5s;
 
                     &:hover {
                         fill: rgba(255, 255, 255, 0.8);
@@ -658,8 +689,6 @@ footer {
                 }
             }
         }
-
-        
     }
 }
 
