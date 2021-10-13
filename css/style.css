@@ -774,6 +774,12 @@ footer {
   font-weight: 500;
 }
 
+@media screen and (max-width: 767px) {
+  #qa_area .panel .panel-body {
+    width: 90%;
+  }
+}
+
 #qa_area .panel .panel-body p {
   margin-bottom: 0;
 }
