@@ -102,7 +102,6 @@ footer {
 
 // scrollTop
 .top-btn {
-    fill: $colorgold;
     position: fixed;
     right: 3rem;
     bottom: 6rem;
@@ -120,7 +119,7 @@ footer {
     }
 
     &:hover {
-        fill-opacity: 0.8;
+        opacity: 0.8;
     }
 }
 
@@ -179,12 +178,8 @@ footer {
 
     .f-icon {
         text-decoration: none;
-        &:hover svg {
-            fill-opacity: 0.8;
-        }
-
-        svg {
-            fill: #fff;
+        &:hover img {
+            opacity: 0.8;
         }
     }
 }
@@ -371,10 +366,7 @@ footer {
                     margin-left: -50px;
                 }
 
-                svg {
-                    fill: #fff;
-                    width: 70px;
-                    height: 70px;
+                img {
                     max-width: 100%;
                     height: auto;
                     display: block;
@@ -388,8 +380,6 @@ footer {
                         height: 40px;
                     }
                 }
-
-                
             }
 
             .s-p-text {
@@ -601,25 +591,24 @@ footer {
             z-index: 2;
             right: 2rem;
             bottom: 1.5rem;
-            width: 32px;
-            height: 32px;
+            width: 40px;
+            height: 30px;
             display: block;
             transform: translate(-50%, -50%);
 
-            svg {
-                filter: drop-shadow(0px 0px 5px rgb(201, 171, 130));
-            }
 
-            .fa-vr-cardboard {
-                width: 50px;
-                height: 50px;
-                color: #fff;
-                transition: 0.5s;
+
+            img {
+                width: 100%;
+                height: 100%;
 
                 &:hover {
-                    color: rgba(255, 255, 255, 0.8);
+                    transform: scale(1.05);
                 }
+                
             }
+
+            
         }
     }
 }
@@ -669,12 +658,12 @@ footer {
                 right: 1rem;
                 bottom: 1rem;
 
-                svg {
-                    fill: #fff;
+                img {
+                    opacity: 1;
                     transition: 0.5s;
 
                     &:hover {
-                        fill: rgba(255, 255, 255, 0.8);
+                        opacity: 0.8;
                     }
                 }
             }
@@ -684,13 +673,13 @@ footer {
                 bottom: 2rem;
                 display: none;
 
-                svg {
-                    fill: #fff;
+                img {
+                    opacity: 1;
                     margin: 5px 0;
                     transition: 0.5s;
 
                     &:hover {
-                        fill: rgba(255, 255, 255, 0.8);
+                        opacity: 0.8;
                     }
                 }
             }
@@ -795,9 +784,6 @@ footer {
         display: inline-block;
         margin-right: 15px;
 
-        svg {
-            fill: $colorgold;
-        }
     }
 
     .contact-info-text {
@@ -809,6 +795,10 @@ footer {
         a {
             text-decoration: none;
             color: #555;
+        }
+
+        p {
+            margin-left: 15px;
         }
     }
 }
