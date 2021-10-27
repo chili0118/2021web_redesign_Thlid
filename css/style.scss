@@ -113,7 +113,7 @@ footer {
     z-index: 99;
 
     @media screen and (max-width: $mobile) {
-        right: 1rem;
+        right: 8%;
         width: 40px !important;
         height: 40px !important;
     }
@@ -440,13 +440,17 @@ footer {
 
     .pf-btn {
         cursor: pointer;
-        color: rgb(150, 150, 150);
         padding: 15px;
         transition: 0.5s;
         letter-spacing: 2px;
 
         &:hover {
             color: #333;
+        }
+
+        a {
+            color: rgb(150, 150, 150);
+            text-decoration: none;
         }
 
         @media screen and (max-width: $mobile) {
@@ -461,8 +465,12 @@ footer {
         padding: 15px 2px;
         letter-spacing: 2px;
         border-bottom: 5px solid $colorgold;
-        color: #333;
         box-sizing: border-box;
+
+        a {
+            color: #333;
+            text-decoration: none;
+        }
 
         @media screen and (max-width: $mobile) {
             flex-basis: 20%;
@@ -485,6 +493,7 @@ footer {
             transform: scale(1);
             transition: all 0.5s ease-in-out;
             overflow: hidden;
+            height: 260px;
 
             &:hover .pf-hover {
                 background: rgba(0, 0, 0, 0.45);
@@ -492,6 +501,9 @@ footer {
 
             img {
                 transition: all 0.5s ease-in-out;
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
             }
         }
 
@@ -518,25 +530,11 @@ footer {
 }
 
 #pf_page {
-    .page-link {
-        border: none;
-        transition: 0.5s;
-
-        &:focus {
-            box-shadow: none;
-        }
+    .page-item > a {
+        cursor: pointer;
 
         &:hover {
-            background-color: transparent;
-        }
-
-        &:hover svg {
-            fill: #555;
-        }
-
-        svg {
-            fill: $colorgold;
-            transition: 0.3s;
+            text-decoration: none;
         }
     }
 }

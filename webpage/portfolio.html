@@ -86,7 +86,7 @@
     <!-- 案例分享 內容選單 -->
     <section id="portfolio_filters">
         <div class="container px-3 p-md-0">
-            <div class="row filters text-center justify-content-center">
+            <!-- <div class="row filters text-center justify-content-center">
                 <div class="col pf-active">ALL</div>
                 <div class="col pf-btn">客廳</div>
                 <div class="col pf-btn">餐廳</div>
@@ -98,6 +98,20 @@
                 <div class="col pf-btn">玄關</div>
                 <div class="col pf-btn">兒童房</div>
                 <div class="col pf-btn">衣帽間</div>
+
+            </div> -->
+
+            <div class="row filters text-center justify-content-center">
+
+                <div class="col pf-btn"><a href="/Home/Portfolio?cid=15">小孩房</a></div>
+                <div class="col pf-btn"><a href="/Home/Portfolio?cid=16">客廳</a></div>
+                <div class="col pf-btn"><a href="/Home/Portfolio?cid=17">主臥室</a></div>
+                <div class="col pf-btn"><a href="/Home/Portfolio?cid=18">孝親房</a></div>
+                <div class="col pf-btn"><a href="/Home/Portfolio?cid=19">主臥</a></div>
+                <div class="col pf-btn"><a href="/Home/Portfolio?cid=21">女孩房</a></div>
+                <div class="col pf-btn"><a href="/Home/Portfolio?cid=22">禪房</a></div>
+                <div class="col pf-btn"><a href="/Home/Portfolio?cid=23">ok房</a></div>
+                <div class="col pf-active"><a href="/Home/Portfolio?cid=0">ALL</a></div>
 
             </div>
         </div>
@@ -282,21 +296,30 @@
     </section>
 
     <!-- 分頁按鈕 -->
+
+
     <nav class="pb-5" aria-label="pagearea" id="pf_page">
+
+
         <ul class="pagination justify-content-center">
-            <li class="page-item">
-                <a class="page-link" href="" tabindex="-1">
-                    <img src="/image/arrow_left.png" alt="">
-                </a>
-            </li>
-            <li class="page-item disabled"><a class="page-link" href="#">1</a></li>
-            <li class="page-item">
-                <a class="page-link" href="">
-                    <img src="/image/arrow_right.png" alt="">
-                </a>
-            </li>
+
+
+            <div class="pagination-container">
+                <ul class="pagination">
+                    <!-- <li class="page-item disabled PagedList-skipToFirst"><a>&lt;&lt;第一頁</a></li> -->
+                    <li class="page-item disabled PagedList-skipToPrevious"><a rel="prev"> <img
+                                src="/image/arrow_left.png" alt=""> </a></li>
+                    <li class="page-item disabled PagedList-pageCountAndLocation"><a>1</a></li>
+                    <li class="page-item disabled PagedList-skipToNext"><a rel="next"> <img src="/image/arrow_right.png"
+                                alt=""> </a></li>
+                    <!-- <li class="page-item disabled PagedList-skipToLast"><a>最末頁&gt;&gt;</a></li> -->
+                </ul>
+            </div>
         </ul>
     </nav>
+
+
+
 
 
 

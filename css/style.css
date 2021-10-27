@@ -113,7 +113,7 @@ footer {
 
 @media screen and (max-width: 767px) {
   .top-btn {
-    right: 1rem;
+    right: 8%;
     width: 40px !important;
     height: 40px !important;
   }
@@ -445,7 +445,6 @@ footer {
 
 .filters .pf-btn {
   cursor: pointer;
-  color: #969696;
   padding: 15px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -454,6 +453,11 @@ footer {
 
 .filters .pf-btn:hover {
   color: #333;
+}
+
+.filters .pf-btn a {
+  color: #969696;
+  text-decoration: none;
 }
 
 @media screen and (max-width: 767px) {
@@ -470,9 +474,13 @@ footer {
   padding: 15px 2px;
   letter-spacing: 2px;
   border-bottom: 5px solid #c9aa82;
-  color: #333;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+.filters .pf-active a {
+  color: #333;
+  text-decoration: none;
 }
 
 @media screen and (max-width: 767px) {
@@ -503,6 +511,7 @@ footer {
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   overflow: hidden;
+  height: 260px;
 }
 
 .p-f-item a .pf-img:hover .pf-hover {
@@ -512,6 +521,10 @@ footer {
 .p-f-item a .pf-img img {
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .p-f-item a .pf-hover {
@@ -534,29 +547,12 @@ footer {
   font-size: 1rem;
 }
 
-#pf_page .page-link {
-  border: none;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+#pf_page .page-item > a {
+  cursor: pointer;
 }
 
-#pf_page .page-link:focus {
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
-
-#pf_page .page-link:hover {
-  background-color: transparent;
-}
-
-#pf_page .page-link:hover svg {
-  fill: #555;
-}
-
-#pf_page .page-link svg {
-  fill: #c9aa82;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+#pf_page .page-item > a:hover {
+  text-decoration: none;
 }
 
 .breadcrumb {
