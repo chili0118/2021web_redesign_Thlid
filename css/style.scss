@@ -440,7 +440,7 @@ footer {
 
     .pf-btn {
         cursor: pointer;
-        padding: 15px;
+        padding: 15px 2px;
         transition: 0.5s;
         letter-spacing: 2px;
 
@@ -777,6 +777,7 @@ footer {
 
 .contact-info-list {
     padding: 10px;
+    display: flex;
 
     .contact-info-icon {
         display: inline-block;
@@ -795,9 +796,6 @@ footer {
             color: #555;
         }
 
-        p {
-            margin-left: 15px;
-        }
     }
 }
 
