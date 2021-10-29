@@ -28,7 +28,7 @@ footer {
   height: 100vh;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: scroll;
 }
 
 #banner_bg #banner_text {
@@ -109,18 +109,24 @@ footer {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   z-index: 99;
+  width: 65px;
+  height: 65px;
+  opacity: .7;
+}
+
+.top-btn img {
+  width: 100%;
+  height: 100%;
 }
 
 @media screen and (max-width: 767px) {
   .top-btn {
-    right: 8%;
-    width: 40px !important;
-    height: 40px !important;
+    right: 10%;
   }
 }
 
 .top-btn:hover {
-  opacity: 0.8;
+  opacity: 1;
 }
 
 #about_content {
@@ -262,6 +268,13 @@ footer {
           box-sizing: border-box;
 }
 
+@media screen and (max-width: 767px) {
+  .s-i-card .s-i-text {
+    padding: 10px 10px;
+    width: 60%;
+  }
+}
+
 .s-i-card .s-i-text h2,
 .s-i-card .s-i-text p {
   width: 100%;
@@ -282,6 +295,12 @@ footer {
   color: #555;
 }
 
+@media screen and (max-width: 767px) {
+  .s-i-card .s-i-text p {
+    font-size: 0.9rem;
+  }
+}
+
 .s-i-card .s-i-img {
   width: 50%;
   -webkit-transition: all 0.35s ease-in-out;
@@ -292,6 +311,12 @@ footer {
   float: right;
   right: -15%;
   z-index: 1;
+}
+
+@media screen and (max-width: 767px) {
+  .s-i-card .s-i-img {
+    width: 40%;
+  }
 }
 
 .s-i-card .s-i-img:hover {

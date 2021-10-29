@@ -33,7 +33,8 @@ footer {
     height: 100vh;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: scroll;
+    
 
     #banner_text {
         width: 100%;
@@ -111,15 +112,21 @@ footer {
     display: none;
     transition: 0.5s;
     z-index: 99;
+    width: 65px;
+    height: 65px;
+    opacity: .7;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
 
     @media screen and (max-width: $mobile) {
-        right: 8%;
-        width: 40px !important;
-        height: 40px !important;
+        right: 10%;
     }
 
     &:hover {
-        opacity: 0.8;
+        opacity: 1;
     }
 }
 
@@ -264,6 +271,11 @@ footer {
         left: 0;
         box-sizing: border-box;
 
+        @media screen and (max-width: $mobile) {
+            padding: 10px 10px;
+            width: 60%;
+        }
+
         h2,
         p {
             width: 100%;
@@ -282,6 +294,10 @@ footer {
             font-size: 1rem;
             font-weight: 500;
             color: #555;
+
+            @media screen and (max-width: $mobile) {
+                font-size: 0.9rem;
+            }
         }
     }
 
@@ -293,6 +309,10 @@ footer {
         float: right;
         right: -15%;
         z-index: 1;
+
+        @media screen and (max-width: $mobile) {
+            width: 40%;
+        }
 
         &:hover {
             right: -10%;
